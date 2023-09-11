@@ -1,0 +1,173 @@
+@charset "ISO-8859-1";
+
+/*Import Lato font from Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+:root {
+    /* Variables */
+    --primaryTextColor: #2fa7a1;
+    --secondaryTextColor: rgb(0, 0, 0);
+    --backgroundColor: rgba(245, 245, 245, 0.90);
+    --shadowColor: rgba(75, 75, 75, 0.90);
+}
+
+/* Reset and Common Styles */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Calculate font size for each device based on width and font size guidelines */
+    font-size: calc(15px + 0.390625vw);
+}
+
+body {
+    background-color: var(--backgroundColor);
+}
+
+.app-container {
+    margin: 4vh 4vw 4vh 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Section 1 */
+.section1-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 0.5rem;
+    margin: 2vh 2vw;
+    letter-spacing: 0.25rem;
+    color: var(--primaryTextColor);
+    border-bottom: .2rem solid var(--backgroundColor);
+    text-shadow: 0.1rem 0.1rem 0 var(--shadowColor);
+    transform: skew(-10deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.images-container {
+    margin: 2vh 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.images {
+    height: 30vh;
+    width: 35vw;
+    border-radius: 1rem;
+}
+
+.section1-body {
+    margin: 2vh 2vw;
+    font-size: 1.2rem;
+    color: var(--secondaryTextColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grade-scale {
+    font-size: 1rem;
+    color: var(--secondaryTextColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grade-scale-item {
+    margin: 1vh 1vw;
+}
+
+
+/* Section 2 */
+.section2-heading {
+    margin: 2vh 2vw;
+    font-size: 1.2rem;
+    color: var(--primaryTextColor);
+    border-bottom: 0.10rem solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    margin: 2vh 2vw;
+    font-size: 1rem;
+    color: var(--secondaryTextColor);
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #777;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerLabels {
+    margin: 2vh 2vw;
+    font-size: 1rem;
+    color: var(--secondaryTextColor);
+}
+
+.subLabels {
+    margin: .5vh .5vw;
+}
+
+.subLabels-item {
+    margin: 0 .25vw;
+}
+
+.inputFields {
+    margin: 1vh 1vw;
+    font-size: 1rem;
+    white-space: nowrap;
+    width: 5rem;
+    color: var(--secondaryTextColor);
+}
+
+.selectFields {
+    margin: 0 .25vw;
+    font-size: 1rem;
+}
+
+.radioButtons {
+    font-size: 1rem;
+    margin: 1vh 1vw;
+    color: var(--secondaryTextColor);
+}
+
+/* Result JSP */
+.output {
+    margin: 2vh 2vw;
+    font-size: 1rem;
+    color: var(--secondaryTextColor);
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #777;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.output-items {
+    margin: 2vh 2vw;
+    font-size: 1rem;
+    color: var(--secondaryTextColor);
+}

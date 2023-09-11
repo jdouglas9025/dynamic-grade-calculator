@@ -1,0 +1,152 @@
+<!--Images Attribution: -->
+<!--calculator.jpg downloaded from Edar on Pixabay.com (Link: https://pixabay.com/photos/business-calculator-calculation-861325/) -->
+
+<!-- Landing page for Dynamic Grade Calculator -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Grade Calculator</title>
+    <link href="styles/dynamic-grade-calculator-styles.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="app-container">
+    <section>
+        <h1 class="section1-heading">Dynamic Grade Calculator</h1>
+
+        <div class="images-container">
+            <img class="images" src="images/calculator.jpg" alt="A picture of a calculator">
+        </div>
+
+        <h2 class="section1-body">Estimate your final grade in a course (if you haven't received all grades,
+            find out the average grade you'll need on remaining coursework to achieve your desired letter grade)</h2>
+
+        <div class="grade-scale">
+            <h3>Scale:</h3>
+            <h3 class="grade-scale-item">A&nbsp;90 - 100</h3>
+            <h3 class="grade-scale-item">B&nbsp;80 - 89</h3>
+            <h3 class="grade-scale-item">C&nbsp;70 - 79</h3>
+            <h3 class="grade-scale-item">D&nbsp;60 - 69</h3>
+            <h3 class="grade-scale-item">F&nbsp;0 - 59</h3>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section2-heading">Coursework Details</h2>
+
+        <form action="calculate-servlet" class="form" id="form" method="post">
+            <label class="containerLabels" id="targetGradeLabel">
+                What final letter grade do you want to achieve for the course? Enter a single letter (e.g., A)
+                <!-- maxLength only allows a single character, and pattern specifies the valid characters (any listed) -->
+                <input class="inputFields" minlength="1" maxlength="1" name="targetGrade" pattern="[ABCDFabcdf]" type="text">
+            </label>
+
+            <label class="containerLabels" id="percentageWeightsLabel">
+                Exam 1 weight
+                <input class="inputFields" max="100" min="0" name="exam1Weight" type="number">
+
+                Exam 2 weight
+                <input class="inputFields" max="100" min="0" name="exam2Weight" type="number">
+
+                Final exam weight
+                <input class="inputFields" max="100" min="0" name="finalExamWeight" type="number">
+
+                Lab weight
+                <input class="inputFields" max="100" min="0" name="labWeight" type="number">
+
+                Quiz weight
+                <input class="inputFields" max="100" min="0" name="quizWeight" type="number">
+            </label>
+
+            <label class="containerLabels" id="scoreResponsesLabel">
+                <label class="subLabels">
+                    <label class="subLabels-item" id="exam1ResponseLabel">
+                        Do you know your exam 1 score?
+                        <select class="selectFields" id="exam1Response" name="exam1Response">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </label>
+
+                    <label class="subLabels-item" id="exam1ScoreLabel">
+                        Exam 1 grade
+                        <input class="inputFields" max="120" maxlength="3" min="0" name="exam1Score" type="number">
+                    </label>
+                </label>
+
+                <label class="subLabels">
+                    <label class="subLabels-item" id="exam2ResponseLabel">
+                        Do you know your exam 2 score?
+                        <select class="selectFields" id="exam2Response" name="exam2Response">
+                            <!-- selected is an attribute to specify default option -->
+                            <option selected value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </label>
+
+                    <label class="subLabels-item" id="exam2ScoreLabel">
+                        Exam 2 grade
+                        <input class="inputFields" max="120" maxlength="3" min="0" name="exam2Score" type="number">
+                    </label>
+                </label>
+
+                <label class="subLabels">
+                    <label class="subLabels-item" id="finalExamResponseLabel">
+                        Do you know your final exam score?
+                        <select class="selectFields" id="finalExamResponse" name="finalExamResponse">
+                            <!-- selected is an attribute to specify default option -->
+                            <option selected value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </label>
+
+                    <label class="subLabels-item" id="finalExamScoreLabel">
+                        Final exam grade
+                        <input class="inputFields" max="120" maxlength="3" min="0" name="finalExamScore" type="number">
+                    </label>
+                </label>
+
+                <label class="subLabels">
+                    <label class="subLabels-item" id="labResponseLabel">
+                        Do you know your lab score?
+                        <select class="selectFields" id="labResponse" name="labResponse">
+                            <!-- selected is an attribute to specify default option -->
+                            <option selected value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </label>
+
+                    <label class="subLabels-item" id="labScoreLabel">
+                        Average lab grade
+                        <input class="inputFields" max="120" maxlength="3" min="0" name="labScore" type="number">
+                    </label>
+                </label>
+
+                <label class="subLabels">
+                    <label class="subLabels-item" id="quizResponseLabel">
+                        Do you know your quiz score?
+                        <select class="selectFields" id="quizResponse" name="quizResponse">
+                            <!-- selected is an attribute to specify default option -->
+                            <option selected value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </label>
+
+                    <label class="subLabels-item" id="quizScoreLabel">
+                        Average quiz grade
+                        <input class="inputFields" max="120" maxlength="3" min="0" name="quizScore" type="number">
+                    </label>
+                </label>
+            </label>
+
+            <label class="containerLabels" id="formButtons">
+                <input class="radioButtons" type="submit" value="Calculate">
+                <input class="radioButtons" type="reset" value="Reset">
+            </label>
+        </form>
+    </section>
+</div>
+<script defer src="scripts/dynamic-grade-calculator-script.js"></script>
+</body>
+</html>
