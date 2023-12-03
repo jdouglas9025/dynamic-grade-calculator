@@ -3,7 +3,9 @@ A dynamic grade calculator app that allows users to estimate their final grade i
 
 ## Key Highlights
 • Developed a dynamic user interface using HTML, CSS, and JavaScript
+
 • Engineered an MVC backend system using Java and Jakarta EE
+
 • Provided users with the average score needed on remaining coursework to achieve a desired letter grade
 
 ## Technologies
