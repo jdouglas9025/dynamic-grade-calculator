@@ -1,6 +1,11 @@
 # Dynamic Grade Calculator
 A dynamic grade calculator app that allows users to estimate their final grade in a hypothetical course. If the user hasn't received all their grades, they can find out the average grade they'll need on remaining coursework to achieve a desired letter grade.
 
+## Key Highlights
+• Developed a dynamic user interface using HTML, CSS, and JavaScript
+• Engineered an MVC backend system using Java and Jakarta EE
+• Provided users with the average score needed on remaining coursework to achieve a desired letter grade
+
 ## Technologies
 HTML, CSS, JavaScript, Java SE, and Jakarta EE
 
